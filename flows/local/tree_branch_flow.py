@@ -75,7 +75,7 @@ class Branch_Flow(FlowSpec):
             return inp.clf,\
                    np.mean(inp.scores)
 
-            
+        print(f"\nthe scores are {inputs}\n")
         self.results = sorted(map(score, inputs), key=lambda x: -x[1]) 
         self.model = self.results[0][0]
         self.next(self.end)
